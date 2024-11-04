@@ -1,0 +1,31 @@
+
+#include <stdio.h
+int main (){ matrix[n][m];
+int i,j;
+    
+    printf("matrix[n][m]:\n");
+    for (int i = 0; i < n ; i++) {
+        for (int j = 0; j < m ; j++) {
+            printf("%c ", matrix[i][j]);
+        }
+        printf("\n");
+
+  
+    printf("\nالمصفوفة بعد تبديل المثلثين:\n");
+    for (int i = 0; i < n ; i++) {
+        for (int j = i + 1; j < m ; j++) {
+            char temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    }
+    for (int i = 0; i < n ; i++) {
+        for (int j = 0; j < m ; j++) {
+            printf("%c ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
