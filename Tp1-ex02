@@ -1,31 +1,46 @@
 
-#include <stdio.h
-int main (){ matrix[n][m];
-int i,j;
+
+    #include <stdio.h>
+
+int main() 
+{
+    int mat[4][4],x,c,i,j;
     
-    printf("matrix[n][m]:\n");
-    for (int i = 0; i < n ; i++) {
-        for (int j = 0; j < m ; j++) {
-            printf("%c ", matrix[i][j]);
-        }
-        printf("\n");
+    
+   printf("mat[4][4]=\n");
+  c=1;
+  for(i=0;i<4;i++){
+  for(j=0;j<4;j++){
+ mat[i][j]=c; 
+ c++;}
+ }
+ 
 
-  
-    printf("\n la matrix aprés avoir échangé les triangles:\n");
-    for (int i = 0; i < n ; i++) {
-        for (int j = i + 1; j < m ; j++) {
-            char temp = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = temp;
-        }
-    }
-    for (int i = 0; i < n ; i++) {
-        for (int j = 0; j < m ; j++) {
-            printf("%c ", matrix[i][j]);
-        }
-        printf("\n");
-    }
+ printf("\n");
+ for(i=0;i<4;i++){
+ for(j=0;j<4;j++){
+ printf("%d \t",mat[i][j]);
+ }printf ("\n");
+ }
 
-    return 0;
+ printf("\n");
+    
+ for (int i = 0; i < 4;i++) 
+ {
+    for (int j = i + 1; j < 4; j++)
+    {
+            x = mat[i][j];
+            mat[i][j] = mat[j][i];
+            mat[j][i] = x;
+    }
+ }   
+ printf("nouveau mat est\n");
+ for (int i = 0; i< 4; i++){
+ for (int j= 0; j < 4; j++) 
+        printf("%d ", mat[i][j]);
+        
+        printf("\n");
+ }
+
+ return 0;
 }
-
