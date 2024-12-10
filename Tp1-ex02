@@ -11,7 +11,7 @@ int i,j;
         printf("\n");
 
   
-    printf("\nالمصفوفة بعد تبديل المثلثين:\n");
+    printf("\n la matrix aprés avoir échangé les triangles:\n");
     for (int i = 0; i < n ; i++) {
         for (int j = i + 1; j < m ; j++) {
             char temp = matrix[i][j];
